@@ -1,11 +1,69 @@
-.myImage{
-  width: 300px;
-  display:inline;
-  
-}
+body {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  height: 100vh; /* ارتفاع 100% صفحه */  
+  margin: 0; /* حذف حاشیه‌های پیش‌فرض */  
+  background-color: #000; /* رنگ پس‌زمینه پیش‌فرض */  
+  background-size: cover; /* پوشش کامل صفحه */  
+  background-repeat: no-repeat; /* عدم تکرار تصویر */  
+  background-position: center; /* قرارگیری در وسط */  
+}  
+ 
 
+.search-container {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  margin-bottom: 20px;  
+}  
 
+#searchBar {  
+  padding: 10px;  
+  margin-bottom: 10px;  
+  border: 1px solid #ccc;  
+  border-radius: 5px;  
+  width: 80%;  
+}  
 
-.green{
-  color: blueviolet;
+#search {  
+  padding: 10px;  
+  border: none;  
+  background-color: #c740b0; /* رنگ پیش‌فرض */  
+  color: white;  
+  border-radius: 5px;  
+  cursor: pointer;  
+}  
+
+#search:hover {  
+  background-color: #0056b3; /* تغییر رنگ هنگام hover */  
+}  
+
+.weather {  
+  display: flex;  
+  flex-direction: column; /* چیدمان عمودی */  
+  align-items: center; /* مرکز کردن عناصر */  
+  margin-top: 20px; /* فاصله از جستجو */  
+}  
+
+.icon-container {  
+  display: flex; /* استفاده از flexbox */  
+  justify-content: center; /* مرکز کردن افقی */  
+  align-items: center; /* مرکز کردن عمودی */  
+  margin: 10px 0; /* فاصله عمودی */  
+}  
+
+.icon {  
+  width: 75px; /* عرض آیکون */  
+  height: auto; /* حفظ تناسب */  
+}  
+
+.description,  
+.humidity,  
+.wind,  
+.windDirection {  
+  color: white; /* رنگ متن */  
+  text-align: center; /* مرکز کردن متن */  
+  margin: 5px 0; /* فاصله عمودی */  
 }

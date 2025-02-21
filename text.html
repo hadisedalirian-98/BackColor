@@ -1,26 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>  
+<html lang="fa">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>سرچ بار</title>  
+    <style>  
+        body {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;   
+            margin: 0;  
+            background-color: #000; 
+            background-size: cover;  
+            background-repeat: no-repeat;  
+            background-position: center; 
+        }     
+         
 
-  
-  </head>
+        .search-container {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            margin-bottom: 20px;  
+        }  
 
+        #searchBar {  
+            padding: 10px;  
+            margin-bottom: 10px;  
+            border: 1px solid #ccc;  
+            border-radius: 5px;  
+            width: 80%;  
+        }  
 
-  <body>
+        #search {  
+            padding: 10px;  
+            border: none;  
+            background-color: #c740b0; /* رنگ پیش‌فرض */  
+            color: white;  
+            border-radius: 5px;  
+            cursor: pointer;  
+        }  
 
-<body>
+        #search:hover {  
+            background-color: #0056b3; /* تغییر رنگ هنگام hover */  
+        }  
 
-<button  type ="button" id="btn">click here</button>
-<input type ="range" min="0" max="100" id="range">
-<span>
-<span id="ms"></span>
-</span>
+        .weather {  
+            display: flex;  
+            flex-direction: column; /* چیدمان عمودی */  
+            align-items: center; /* مرکز کردن عناصر */  
+            margin-top: 20px; /* فاصله از جستجو */  
+        }  
 
-    <script src="script.js"></script>
-  </body>
+        .icon-container {  
+            display: flex; /* استفاده از flexbox */  
+            justify-content: center; /* مرکز کردن افقی */  
+            align-items: center; /* مرکز کردن عمودی */  
+            margin: 10px 0; /* فاصله عمودی */  
+        }  
+
+        .icon {  
+            width: 75px; /* عرض آیکون */  
+            height: auto; /* حفظ تناسب */  
+        }  
+
+        .description, .humidity, .wind, .windDirection {  
+            color: white; /* رنگ متن */  
+            text-align: center; /* مرکز کردن متن */  
+            margin: 5px 0; /* فاصله عمودی */  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="search-container">  
+        <input type="search" id="searchBar" placeholder="plz enter your city name">  
+        <button id="search">click here</button>  
+    </div>  
+    <p id="msg">enter your city</p>   
+    <div class="weather">  
+        <h2 class="city"></h2>  
+        <h1 class="temp"></h1>  
+        <div class="flex"></div>  
+        <div class="icon-container">  
+            <img src="" alt="" class="icon" />  
+        </div>   
+        <div class="description"></div>  
+        <div class="humidity"></div>  
+        <div class="wind"></div>  
+        <div class="windDirection"></div>  
+        <div id="enterCity"></div>  
+    </div>  
+    <script src="script.js"></script>  
+</body>  
 </html>
